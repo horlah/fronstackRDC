@@ -1,0 +1,524 @@
+body {
+  font-family: 'Catamaran', sans-serif;
+}
+
+header {
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  color: white;
+  text-align: center;
+  padding: 10px 15px 80px;
+  font-family: 'Catamaran', sans-serif;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+header nav div {
+  width: 100%;
+  margin: 15px 0;
+}
+
+header nav div img {
+  opacity: 0;
+  animation: 0.6s nav-item cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
+}
+
+header nav div a {
+  opacity: 0;
+  color: white;
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 0 15px;
+  animation: 0.6s 0.7s nav-item cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all .5s;
+}
+
+header nav div a:hover {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+header nav div button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 35px;
+  color: white;
+  opacity: 0;
+  animation: 0.6s 1.1s nav-item cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
+  transition: all .5s;
+}
+
+header nav div:last-child {
+  margin-top: 0;
+}
+
+@keyframes nav-item {
+  from {
+    transform: translate(0, -25%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+header .main {
+  margin: 25px 0;
+}
+
+header .main h2 {
+  font-style: normal;
+  font-weight: 900;
+  line-height: 47px;
+  font-size: 50px;
+  text-align: center;
+  opacity: 0;
+  animation: 1.2s 1.6s main-h2 cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
+}
+
+@keyframes main-h2 {
+  from {
+    transform: translate(0, -10%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+}
+
+.input {
+  height: 100px;
+  text-align: center;
+  color: white;
+  margin-top: -64px;
+}
+
+.input label, .input input {
+  display: inline-block;
+}
+
+.input label {
+  font-family: Catamaran;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 18px;
+  opacity: 0;
+  animation: 0.2s 4s input-p cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
+}
+
+@keyframes input-p {
+  from {
+    transform: translate(0, 30%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+}
+
+.input input {
+  background: #FFFFFF;
+  border: 3px solid #F2994A;
+  box-sizing: border-box;
+  border-radius: 40px;
+  bottom: 0;
+  height: 45px;
+  width: 80%;
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: 0.2s 4.2s input-p cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
+}
+
+section.about {
+  margin: 70px 20px;
+  text-align: center;
+}
+
+section.about > h2 {
+  font-family: Catamaran;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  font-size: 20px;
+  letter-spacing: 3.6px;
+  color: #C3C0C0;
+}
+
+section.about p {
+  font-family: Catamaran;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+section.about .imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30% 0 0;
+  padding: 0;
+}
+
+section.about .imgs > div {
+  width: 100%;
+  margin: 0 1% 15%;
+  position: relative;
+}
+
+section.about .imgs > div img {
+  width: 100%;
+  margin: 0;
+}
+
+section.about .imgs > div div {
+  position: absolute;
+  bottom: 2.7%;
+  z-index: 5;
+  color: white;
+  text-align: left;
+  margin: 0 0 5% 5%;
+}
+
+section.about .imgs > div div h2 {
+  margin: 0;
+  Font-style: Bold;
+  font-size: 32px;
+  text-align: left;
+}
+
+section.about .imgs > div div p {
+  margin: 0;
+  text-align: left;
+  color: #D78E52;
+}
+
+section.about .imgs > div::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 2.7%;
+  background: rgba(4, 4, 4, 0.5);
+}
+
+section.about .btn button {
+  color: #E46F55;
+  font-family: Catamaran;
+  border: 2px solid #E36F55;
+  border-radius: 30px;
+  padding: 10px 40px;
+  font-size: 15px;
+  background: white;
+}
+
+section.blog {
+  background: url("http://res.cloudinary.com/horlah/image/upload/g_auto,f_auto,q_auto/charlie-costello-301722_kl0xau.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  color: white;
+  position: relative;
+}
+
+section.blog::after {
+  content: " ";
+  position: absolute;
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  height: 100%;
+  width: 30%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+section.blog::before {
+  content: " ";
+  width: 40%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 36px;
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  transform: skew(-20deg, 0deg);
+}
+
+section.blog div {
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+  left: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.blog div h2 {
+  color: #FEBE61;
+}
+
+section.blog div p {
+  width: 64%;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer p {
+  font-size: 1rem;
+  padding: 1% 0;
+}
+
+footer p a {
+  color: #A9A9A9;
+}
+
+@media (min-width: 600px) {
+  header {
+    text-align: center;
+    padding: 10px 30px 50px;
+    font-family: 'Catamaran', sans-serif;
+  }
+  header nav {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  header nav div {
+    width: 100%;
+    margin: 15px 0;
+    align-self: center;
+  }
+  header nav div a {
+    display: inline-block;
+    padding: 5px 30px;
+  }
+  header nav div a:hover {
+    box-shadow: 1px 3px 10px -7px rgba(0, 0, 0, 0.5);
+  }
+  header nav div button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 35px;
+    color: white;
+  }
+  header nav div button:hover {
+    box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.5);
+  }
+  header nav div:last-child, header nav div:first-child {
+    width: 50%;
+  }
+  header nav div:last-child {
+    margin-top: 0;
+    text-align: right;
+  }
+  header nav div:first-child {
+    text-align: left;
+  }
+  header .main {
+    margin: 100px auto;
+    width: 50%;
+  }
+  header .main h2 {
+    font-style: normal;
+    font-weight: 900;
+    line-height: 67px;
+    font-size: 64px;
+    text-align: center;
+  }
+  .input {
+    height: 100px;
+    text-align: center;
+    color: white;
+    margin-top: -80px;
+  }
+  .input p {
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 24px;
+  }
+  .input input {
+    background: #FFFFFF;
+    border: 3px solid #F2994A;
+    box-sizing: border-box;
+    border-radius: 40px;
+    bottom: 0;
+    height: 65px;
+    width: 45%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  section.about {
+    margin: 10% auto 5%;
+    width: 80%;
+    text-align: center;
+  }
+  section.about > h2 {
+    font-family: Catamaran;
+    font-size: 20px;
+    letter-spacing: 3.6px;
+    color: #C3C0C0;
+  }
+  section.about > p {
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    width: 60%;
+    margin: 15px auto 0;
+  }
+  section.about .imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10% 0 0;
+    padding: 0;
+  }
+  section.about .imgs > div {
+    width: 350px;
+    height: 400px;
+    margin: 0 3%;
+    position: relative;
+  }
+  section.about .imgs > div img {
+    width: 100%;
+    height: 100%;
+  }
+  section.about .imgs > div div {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    text-align: left;
+    bottom: 0;
+    margin: 0 0 5% 5%;
+  }
+  section.about .imgs > div div h2 {
+    margin: 0;
+    Font-style: Bold;
+    font-size: 32px;
+  }
+  section.about .imgs > div div p {
+    margin: 0;
+    color: #D78E52;
+  }
+  section.about .imgs > div::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(4, 4, 4, 0.5);
+  }
+  section.about .btn {
+    margin: 7% 0 0;
+  }
+  section.about .btn button {
+    color: #E46F55;
+    font-family: Catamaran;
+    border: 2px solid #E36F55;
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 15px;
+    transition: all .5s;
+  }
+  section.about .btn button:hover {
+    background: #E36F55;
+    border: 2px solid #E36F55;
+    color: white;
+  }
+  section.blog {
+    height: 45vh;
+    color: white;
+    position: relative;
+  }
+  section.blog::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+    height: 100%;
+    width: 300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+  }
+  section.blog::before {
+    content: "";
+    width: 500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 36px;
+    background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+    transform: skew(-20deg, 0deg);
+  }
+  section.blog div {
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section.blog div h2 {
+    color: #FEBE61;
+    font-size: 18px;
+  }
+  section.blog div p {
+    width: 64%;
+    line-height: 77px;
+    font-size: 72px;
+    font-weight: bold;
+  }
+  footer {
+    text-align: center;
+    padding: 1% 3%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer p {
+    font-size: 14px;
+    padding: 1% 0;
+  }
+  footer p a {
+    color: #A9A9A9;
+  }
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
