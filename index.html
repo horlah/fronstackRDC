@@ -81,8 +81,6 @@
     </footer>
     
     <script>
-        // console.log(window)
-        // var aboutSection = document.getElementsByClassName('about')[0];
         window.addEventListener('scroll', function(e) {
             var img1 = document.getElementsByClassName('disImg')[0];
             var img2 = document.getElementsByClassName('disImg')[1];
@@ -96,17 +94,6 @@
             if (img3.getBoundingClientRect().top < 450) {
                 img3.classList.add('show');
             }
-        //     // console.log(window.scrollY)
-        //     // console.log(window)
-        //     // console.log(aboutSection.getBoundingClientRect().top)
-        //     if (aboutSection.getBoundingClientRect().top < 100) {
-        //         var disImg = document.getElementsByClassName('disImg');
-        //         for (let i = 0; i < disImg.length; i++) {
-        //             document.getElementsByClassName('disImg')[i].classList.add('show');
-
-        //         }
-        //         // alert('work');
-        //     }
         })
     </script>
 </body>
