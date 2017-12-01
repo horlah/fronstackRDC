@@ -3,7 +3,11 @@ body {
 }
 
 header {
-  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: #D59152;
+  background: -webkit-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: -o-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: -moz-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);  
   color: white;
   text-align: center;
   padding: 10px 15px 80px;
@@ -11,7 +15,9 @@ header {
 }
 
 header nav {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -137,6 +143,7 @@ header .main h2 {
   margin-top: 20px;
   text-align: center;
   opacity: 0;
+  color: rgba(0, 0, 0, 0.5);
   animation: 0.2s 4.2s input-p cubic-bezier(0.2, -0.18, 0.9, 0.5) forwards;
 }
 
@@ -146,7 +153,6 @@ section.about {
 }
 
 section.about > h2 {
-  font-family: Catamaran;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -156,7 +162,6 @@ section.about > h2 {
 }
 
 section.about p {
-  font-family: Catamaran;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -166,8 +171,11 @@ section.about p {
 }
 
 section.about .imgs {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: center;
   justify-content: center;
   margin: 30% 0 0;
   padding: 0;
@@ -190,7 +198,7 @@ section.about .imgs > div.show {
 section.about .imgs > div img {
   width: 100%;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 section.about .imgs > div div {
@@ -223,12 +231,11 @@ section.about .imgs > div::after {
   right: 0;
   bottom: 2.7%;
   background: rgba(4, 4, 4, 0.5);
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 section.about .btn button {
   color: #E46F55;
-  font-family: Catamaran;
   border: 2px solid #E36F55;
   border-radius: 30px;
   padding: 10px 40px;
@@ -249,12 +256,19 @@ section.blog {
 section.blog::after {
   content: " ";
   position: absolute;
+  background: #D59152;
+  background: -webkit-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: -o-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: -moz-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
   background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
   height: 100%;
   width: 30%;
   z-index: 2;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: center;
   justify-content: center;
   padding-left: 50px;
 }
@@ -266,6 +280,10 @@ section.blog::before {
   top: 0;
   bottom: 0;
   left: 36px;
+  background: #D59152;
+  background: -webkit-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: -o-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  background: -moz-linear-gradient(180deg, #EB5757 0%, #D59152 100%);
   background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
   transform: skew(-20deg, 0deg);
 }
@@ -275,8 +293,11 @@ section.blog div {
   height: 100%;
   z-index: 10;
   left: 8%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -294,7 +315,9 @@ section.blog div p {
 footer {
   text-align: center;
   padding: 5% 0;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 
@@ -309,34 +332,20 @@ footer p a {
 
 @media (min-width: 600px) {
   header {
-    text-align: center;
     padding: 10px 30px 50px;
-    font-family: 'Catamaran', sans-serif;
   }
   header nav {
-    display: flex;
+    -webkit-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    width: 100%;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
   }
   header nav div {
-    width: 100%;
-    margin: 15px 0;
+    -webkit-align-self: center;
     align-self: center;
   }
   header nav div a {
-    display: inline-block;
     padding: 5px 30px;
-  }
-  header nav div a:hover {
-    box-shadow: 1px 3px 10px -7px rgba(0, 0, 0, 0.5);
-  }
-  header nav div button {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    border-radius: 25px;
-    padding: 10px 35px;
-    color: white;
   }
   header nav div button:hover {
     box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.5);
@@ -356,112 +365,57 @@ footer p a {
     width: 50%;
   }
   header .main h2 {
-    font-style: normal;
-    font-weight: 900;
     line-height: 67px;
     font-size: 64px;
-    text-align: center;
   }
   .input {
-    height: 100px;
-    text-align: center;
-    color: white;
     margin-top: -80px;
   }
   .input p {
-    font-family: Catamaran;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     font-size: 24px;
   }
   .input input {
-    background: #FFFFFF;
-    border: 3px solid #F2994A;
-    box-sizing: border-box;
-    border-radius: 40px;
-    bottom: 0;
     height: 65px;
     width: 45%;
-    margin-top: 20px;
-    text-align: center;
     font-size: 1rem;
-    color: rgba(0, 0, 0, 0.5);
   }
   section.about {
     margin: 10% auto 5%;
     width: 80%;
-    text-align: center;
-  }
-  section.about > h2 {
-    font-family: Catamaran;
-    font-size: 20px;
-    letter-spacing: 3.6px;
-    color: #C3C0C0;
   }
   section.about > p {
-    font-family: Catamaran;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    font-size: 18px;
-    text-align: center;
     width: 60%;
     margin: 15px auto 0;
   }
   section.about .imgs {
-    display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
-    justify-content: center;
     margin: 10% 0 0;
-    padding: 0;
   }
   section.about .imgs > div {
     width: 350px;
     height: 400px;
     margin: 0 3%;
-    position: relative;
   }
   section.about .imgs > div img {
-    width: 100%;
     height: 100%;
   }
   section.about .imgs > div div {
-    position: absolute;
     z-index: 5;
     color: white;
     text-align: left;
     bottom: 0;
-    margin: 0 0 5% 5%;
-  }
-  section.about .imgs > div div h2 {
-    margin: 0;
-    Font-style: Bold;
-    font-size: 32px;
-  }
-  section.about .imgs > div div p {
-    margin: 0;
-    color: #D78E52;
   }
   section.about .imgs > div::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    background: rgba(4, 4, 4, 0.5);
   }
   section.about .btn {
     margin: 7% 0 0;
   }
   section.about .btn button {
-    color: #E46F55;
-    font-family: Catamaran;
-    border: 2px solid #E36F55;
-    border-radius: 30px;
-    padding: 10px 40px;
-    font-size: 15px;
     transition: all .5s;
   }
   section.about .btn button:hover {
@@ -471,61 +425,32 @@ footer p a {
   }
   section.blog {
     height: 45vh;
-    color: white;
-    position: relative;
   }
   section.blog::after {
-    content: "";
-    position: absolute;
-    background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
-    height: 100%;
     width: 300px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
   }
   section.blog::before {
-    content: "";
     width: 500px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 36px;
-    background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
     transform: skew(-20deg, 0deg);
   }
   section.blog div {
-    position: absolute;
-    height: 100%;
-    z-index: 10;
     left: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
   section.blog div h2 {
-    color: #FEBE61;
     font-size: 18px;
   }
   section.blog div p {
-    width: 64%;
     line-height: 77px;
     font-size: 72px;
-    font-weight: bold;
   }
   footer {
-    text-align: center;
     padding: 1% 3%;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
   }
   footer p {
     font-size: 14px;
-    padding: 1% 0;
-  }
-  footer p a {
-    color: #A9A9A9;
   }
 }
